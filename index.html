@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CompanyName</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+      *{
+        font-family: "Nunito", sans-serif;
+      }
+      a{ text-decoration: none; }
+      .nav-item.dropdown:hover .dropdown-menu { display: block; }
+      .form-select:focus { border-color: #86b7fe; outline: 0; box-shadow: none; }
+      .form-control:focus { border-color: #86b7fe; outline: 0; box-shadow: none; }
+      .dropdown-item {
+        color: var(--bs-nav-link-color);
+      }
+      .dropdown-item.active, .dropdown-item:active {
+        background-color: var(--bs-dropdown-link-hover-bg);
+      }     
+      .navbar-brand {
+        font-weight: bold;
+      }
+      .accordion-button:focus {
+        z-index: 3;
+        outline: 0;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed) {
+        color: var(--bs-accordion-active-color);
+        background-color: white;
+        box-shadow: none;
+      }
+      .accordion-item {
+          color: var(--bs-accordion-color);
+          background-color: var(--bs-accordion-bg);
+          border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+          border-radius: 5px;
+      }
+      .accordion-item:first-of-type>.accordion-header .accordion-button {
+          border-top-left-radius: var(--bs-accordion-inner-border-radius);
+          border-top-right-radius: var(--bs-accordion-inner-border-radius);
+          border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+          border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+      }
+      .carousel-item { height: 90vh; }
+
+      /* MOBILE */
+      @media screen and (max-width: 499px) {
+        .card-img{ height: 40vh; }
+      }
+      /* TAB */
+      @media screen and (min-width: 500px) and (max-width: 799px) {
+        .card-img{ height: 25vh; }
+      }
+      /* DESKTOP */
+      @media screen and (min-width: 800px) and (max-width: 1199px) {
+        .card-img{ height: 20vh; }
+      }
+      /* LAPTOP */
+      @media screen and (min-width: 1200px) and (max-width: 1599px) {
+        .card-img{ height: 30vh; }
+      }
+      /* FULL-HD */
+      @media screen and (min-width: 1600px) {
+        .card-img{ height: 20vh; }
+      }
+    </style>
+
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CompanyName</a>
+        <form class="d-md-flex d-none" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Hero" class="bg-info">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000"
+            style="background: url('https://img.freepik.com/premium-photo/technology-computer-business-coding-office-person-development-working-developer-datum-lapt_1064589-235094.jpg?w=826') no-repeat center center; background-size: cover;"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000"
+          style="background: url('https://img.freepik.com/premium-photo/business-background-with-laptop-workspace-top-view-computer-screen-lights-desk-are-blue-light-there-is-nobody-workspace-with-cup-coffee-flower-notepad-pencil-painting_76964-229146.jpg?w=826') no-repeat center center; background-size: cover;"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000"
+          style="background: url('https://img.freepik.com/premium-photo/website-creator-company-logo-with-monitor-website-code_1106493-409197.jpg?w=826') no-repeat center center; background-size: cover;"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="Cards" class="py-5">
+      <div class="container">
+        <div class="row justify-content-around accordion accordion-flush" id="accordionFlushExample">
+
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card">
+              <div class="card-img"
+              style="background: url('https://img.freepik.com/premium-photo/colorful-display-with-word-blog-hanging-from-it_777576-1684.jpg?w=826') no-repeat center center; background-size: cover;"
+              >
+                <!-- <img class="card-img-top h-100" src="https://img.freepik.com/premium-photo/colorful-display-with-word-blog-hanging-from-it_777576-1684.jpg?w=826" alt="..."> -->
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Details
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2">
+                  <a href="#" class="btn btn-primary"><i class="bi bi-cart3"></i> Add to Cart</a>
+                  <a href="#" class="btn btn-success">Order Now <i class="bi bi-bag-check"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card">
+              <div class="card-img"
+              style="background: url('https://img.freepik.com/free-photo/modern-office-desk-composition_23-2147915830.jpg?t=st=1725539051~exp=1725542651~hmac=7f70d22660f840feaf7921c751913b340ac2beca3ccc2bf839d7b38c09bbb177&w=740') no-repeat center center; background-size: cover;"
+              >
+                <!-- <img class="card-img-top h-100" src="https://img.freepik.com/free-photo/modern-office-desk-composition_23-2147915830.jpg?t=st=1725539051~exp=1725542651~hmac=7f70d22660f840feaf7921c751913b340ac2beca3ccc2bf839d7b38c09bbb177&w=740" alt="image"> -->
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Details
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2">
+                  <a href="#" class="btn btn-primary"><i class="bi bi-cart3"></i> Add to Cart</a>
+                  <a href="#" class="btn btn-success">Order Now <i class="bi bi-bag-check"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card">
+              <div class="card-img" 
+                style="background: url('https://img.freepik.com/free-vector/set-flat-blog-elements-banners_23-2147562978.jpg?t=st=1725540121~exp=1725543721~hmac=5b0d0a992f1fa9c7d32e90004df519b0aa174672cd8b4b31adddc2148c04ff57&w=740') no-repeat center center; background-size: cover;"
+              >
+                <!-- <img class="card-img-top h-100" src="https://img.freepik.com/free-vector/set-flat-blog-elements-banners_23-2147562978.jpg?t=st=1725540121~exp=1725543721~hmac=5b0d0a992f1fa9c7d32e90004df519b0aa174672cd8b4b31adddc2148c04ff57&w=740" alt="image"> -->
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Details
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2">
+                  <a href="#" class="btn btn-primary"><i class="bi bi-cart3"></i> Add to Cart</a>
+                  <a href="#" class="btn btn-success">Order Now <i class="bi bi-bag-check"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="Form" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form action="" class="form-control p-3">
+              <div class="row">
+
+                <div class="col-md-4 mb-3">
+                  <label for="">Name: </label>
+                  <input type="text" name="" id="" class="form-control" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Email: </label>
+                  <input type="email" name="" id="" class="form-control" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Image: </label>
+                  <input type="file" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">NID: </label>
+                  <input type="number" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Password: </label>
+                  <input type="password" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Name: </label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>Choose</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Select 2: </label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>Choose</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Date of Birth: </label>
+                  <input type="date" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Month: </label>
+                  <input type="month" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Password: </label>
+                  <input type="password" name="" id="" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="" class="d-block">Gender: </label>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="Male" checked>
+                      <label class="form-check-label" for="Male">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="Female">
+                      <label class="form-check-label" for="Female">
+                        Female
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="Others">
+                      <label class="form-check-label" for="Others">
+                        Others
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Color: </label>
+                  <input type="color" name="" id="" value="#563d7c" class="form-control form-control-color" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Status: </label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="activeOrNot" checked/>
+                    <label class="form-check-label" for="activeOrNot">Active Or Inactive</label>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="" class="d-block">Status: </label>
+                  <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked/>
+                  <label class="btn btn-outline-success" for="success-outlined">Active</label>
+                  
+                  <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off"/>
+                  <label class="btn btn-outline-danger" for="danger-outlined">Inactive</label>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Write your name" id="floatingTextarea" />
+                    <label for="floatingTextarea">Full Name</label>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Write your name" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Address</label>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Select One or Multiple: </label>
+                  <select class="form-select" multiple aria-label="Multiple select example">
+                    <option selected hidden>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="">Hobbies: </label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Playing">
+                    <label class="form-check-label" for="Playing">
+                      Playing Cricket
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Coding" checked>
+                    <label class="form-check-label" for="Coding">
+                      Coding
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Reading" checked>
+                    <label class="form-check-label" for="Reading">
+                      Reading
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="">Address: </label>
+                  <textarea name="" id="" rows="2" cols="33" class="form-control"></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="button" class="btn btn-success px-5">Save Now</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Table" class="py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 mb-2">
+            <div class="row">
+              <div class="col-md-6">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb my-2">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-md-6 text-end">
+                <a href="" data-bs-toggle="modal" data-bs-target="#Add" class="btn btn-primary">Add New</a>
+              </div>
+              <!-- Add -->
+              <div class="modal fade" id="Add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Save Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="table-responsive">
+              <table class="table table-responsive table-hover table-striped table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col" class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 25%">25%</div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                      </div>
+                    </td>
+                    <td class="text-center d-flex justify-content-around">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#Edit" class="text-success"><i class="bi bi-pencil-square"></i> <span class="d-md-inline d-none ps-1">Edit</span> </a>
+                      <a href="" data-bs-toggle="modal" data-bs-target="#Delete" class="text-danger"><i class="bi bi-trash"></i> <span class="d-md-inline d-none ps-1">Delete</span> </a>
+                    </td>
+                  </tr>
+                  <!-- Edit -->
+                  <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-success">Update Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Delete -->
+                  <div class="modal fade" id="Delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center text-danger fs-3">
+                          Are you sure ?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger">Delete Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
